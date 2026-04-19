@@ -39,7 +39,7 @@ I need validation before the session locks in.
 
 ## Clarifying Questions for the Panel
 
-**Q1** Current p95 read latency on customer profile? What is the acceptable target?
+**Q1** Current p95 read latency on customer profile? What is the acceptable target? (Will help me decided on COst factor that will help me with Acceptable Latency with cache or with Read Only Nodes with data duplication)
 **Q2** How many active customer records? (determines sharding strategy)
 **Q3** Data residency regulations across retail regions? (determines multi-region architecture)
 **Q4** Peak season traffic  — 2x or 10x? (determines whether we shard from day one)
