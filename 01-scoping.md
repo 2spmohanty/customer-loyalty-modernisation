@@ -30,19 +30,19 @@ These materially affect the architecture.
 
 I need validation before the session locks in.
 
-- **A1**  Legacy RDBMS stays live during migration (not decommissioned on day one).
-- **A2**  Read latency is the primary SLA (not write throughput).
-- **A3**  Eventual consistency is acceptable for profile reads across regions.
-- **A4**  Loyalty transaction history is large volume but read patterns are predictable.
+- **A1**  : Legacy RDBMS stays live during migration (not decommissioned on day one).
+- **A2**  : Read latency is the primary SLA (not write throughput).
+- **A3**  : Eventual consistency is acceptable for profile reads across regions.
+- **A4**  : Loyalty transaction history is large volume but read patterns are predictable.
 
 ---
 
 ## Clarifying Questions for the Panel
 
-- **Q1** Current p95 read latency on customer profile? What is the acceptable target? (Will help me decided on COst factor that will help me with Acceptable Latency with cache or with Read Only Nodes with data duplication)
-- **Q2** How many active customer records? (determines sharding strategy)
-- **Q3** Data residency regulations across retail regions? (determines multi-region architecture)
-- **Q4** Peak season traffic  — 2x or 10x? (determines whether we shard from day one)
+- **Q1** : Current p95 read latency on customer profile? What is the acceptable target? (Will help me decided on COst factor that will help me with Acceptable Latency with cache or with Read Only Nodes with data duplication)
+- **Q2** : How many active customer records? (determines sharding strategy)
+- **Q3** : Data residency regulations across retail regions? (determines multi-region architecture)
+- **Q4** : Peak season traffic  — 2x or 10x? (determines whether we shard from day one)
 
 ---
 
