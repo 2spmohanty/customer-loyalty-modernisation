@@ -77,43 +77,43 @@ I need validation before the session locks in.
 
 ## Proposed Phasing
 
-**MONTH 1 — Discovery + Foundation**
-Data audit across 45 tables
-Target schema designed and validated
-Infrastructure provisioned
+**MONTH 1 — Discovery + Foundation**  
+Data audit across 45 tables  
+Target schema designed and validated   
+Infrastructure provisioned  
 
-- Gate: Panel sign-off on document model
+- Gate: Panel sign-off on document model  
 
-**MONTH 2 — Build + Pilot**
-Core profile APIs live on new stack
-Dual-write pipeline operational
-Team upskilling begins
-- Gate: Read latency validated vs baseline
+**MONTH 2 — Build + Pilot**  
+Core profile APIs live on new stack  
+Dual-write pipeline operational  
+Team upskilling begins  
+- Gate: Read latency validated vs baseline  
 
 
-**MONTH 3 — Migration + Validation**
-Full data migrated and reconciled
-5% production traffic on new stack
-Rollback procedure tested
-- Gate: Zero data inconsistency confirmed
+**MONTH 3 — Migration + Validation**  
+Full data migrated and reconciled  
+5% production traffic on new stack  
+Rollback procedure tested  
+- Gate: Zero data inconsistency confirmed  
 
-**MONTH 4 — Scaling + Hardening**
-50% traffic shifted
-Performance validated at scale
-Operational runbooks drafted
-- Gate: p95 target met at 50% load
+**MONTH 4 — Scaling + Hardening**  
+50% traffic shifted  
+Performance validated at scale  
+Operational runbooks drafted  
+- Gate: p95 target met at 50% load  
 
-**MONTH 5 — Cutover**
-100% traffic on new stack
-Legacy RDBMS in read-only mode
-New loyalty features shipping on new architecture
-- Gate: 2 weeks stable, no rollback triggered
+**MONTH 5 — Cutover**  
+100% traffic on new stack  
+Legacy RDBMS in read-only mode  
+New loyalty features shipping on new architecture  
+- Gate: 2 weeks stable, no rollback triggered  
 
-**MONTH 6 — Stabilisation + Handover**
-Team fully autonomous
-Backlog scoped and formally handed over
-Engagement closed
-- Gate: VP Ops signs off on operational readiness
+**MONTH 6 — Stabilisation + Handover**  
+Team fully autonomous  
+Backlog scoped and formally handed over  
+Engagement closed  
+- Gate: VP Ops signs off on operational readiness  
 
 ---
 
