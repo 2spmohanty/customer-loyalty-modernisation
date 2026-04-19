@@ -28,12 +28,12 @@ the business while we do it.
 ## Quick Reference — Delivery At a Glance
 
 
-Month 1  :  Discovery + schema design agreed
-Month 2  :  Core APIs live, dual-write pipeline running
-Month 3  :  Full data migrated, 5% traffic shifted
-Month 4  :  50% traffic, performance validated at scale
-Month 5  :  100% cutover, new features shipping
-Month 6  :  Team handover, engagement closed
+- Month 1  :  Discovery + schema design agreed
+- Month 2  :  Core APIs live, dual-write pipeline running
+- Month 3  :  Full data migrated, 5% traffic shifted
+- Month 4  :  50% traffic, performance validated at scale
+- Month 5  :  100% cutover, new features shipping
+- Month 6  :  Team handover, engagement closed
 
 
 ---
