@@ -33,7 +33,7 @@ This engagement fixes that within 6 months, without touching your existing appli
 
 These materially affect the architecture.
 
-I need validation before the session locks in.
+> Confirmed as True by Daniel Parrott — 20th April 2025
 
 - **A1**  : Legacy RDBMS stays live during migration (not decommissioned on day one).
 - **A2**  : Read latency is the primary SLA (not write throughput).
