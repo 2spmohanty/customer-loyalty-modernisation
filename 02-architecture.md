@@ -38,7 +38,7 @@ while we migrate.
 
 This is a transition state diagram — not the final end state. The Legacy RDBMS remains live and hot throughout the 6 month window. Full decommission is a post Month 6 activity.
 
-![Target State Architecture] In Progress
+![Target State Architecture] **In Progress**
 
 
 
