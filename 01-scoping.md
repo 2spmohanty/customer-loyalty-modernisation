@@ -60,6 +60,8 @@ These materially affect the architecture.
 
 ### Committed — I Am Signing Up For These
 
+> Accepted by Panel with suggestion for GDPR, Latency Budget, Loyalty API — 20th April 2025
+
 ```
 1)  Customer profile on document model
     Single document fetch replaces 45-table JOIN
@@ -93,9 +95,9 @@ These materially affect the architecture.
 - ~~Real-time loyalty balance API (sub-10ms reads): Requires caching strategy confirmed in month 2.~~
 - Full-text customer search Profile search by name, email, loyalty tier.
 -  ~~Multi-region read replicas: Low-latency reads across global retail markets. Requires regions confirmed in month 1~~
-- Low-latency reads for non-EU retail markets 
-  ```EU region is already a committed architecture decision driven by GDPR — this stretch item refers to additional regions for performance optimisation only.``` . 
-  Requires: traffic distribution data per region confirmed before month 2 closes
+- Low-latency reads for non-EU retail markets   
+  ```EU region is already a committed architecture decision driven by GDPR — this stretch item refers to additional regions for performance optimisation only.``` .   
+  Requires: traffic distribution data per region confirmed before month 2 closes .  
 
 ### Backlog — After Stabilisation
 
