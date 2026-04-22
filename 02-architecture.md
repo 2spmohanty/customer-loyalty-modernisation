@@ -1,8 +1,8 @@
 
 # Architecture
 
-**Document:** 02-architecture.md .  
-**Status:** ```IN PROGRESS``` .  
+>**Document:** 02-architecture.md .  
+**Status:** ```IN REVIEW``` .  
 **Last Updated:** 20 April 2026
 
 ---
@@ -38,9 +38,64 @@ while we migrate.
 
 This is a transition state diagram — not the final end state. The Legacy RDBMS remains live and hot throughout the 6 month window. Full decommission is a post Month 6 activity.
 
-![Target State Architecture] **In Progress**
+![Target State Architecture](assets/target_state_architecture.png)
 
 
+---
+
+## CDC Architecture
+
+Two CDC flows operate during the migration.
+Both are temporary — decommissioned by Month 6.
+
+### Flow 1 — Dual-Write CDC (Month 2 – Month 5)
+
+![CDC Dual-Write Flow](assets/cdc_dual_write_flow.svg)
+
+
+> What it enables:
+   - Legacy RDBMS remains the system of record.
+   - Every write to legacy is captured from the transaction log (WAL / binlog) and applied to MongoDB Atlas in near real-time
+   - Atlas is populated and kept current without any application code change
+   - Resume token ensures fault-tolerant restart
+   - no event loss if the pipeline restarts
+
+### Flow 2 — Reverse CDC (Month 5)
+
+![CDC Reverse Flow](assets/reverse_cdc_month5.svg)
+
+What it enables:
+ - After full cutover Atlas becomes primary
+ - All Atlas writes are decoded via Change Streams and synced back to Legacy RDBMS as a follower
+ - Legacy stays warm as an emergency rollback path
+ - Decommissioned Month 6 when 2-week
+ - stability window is confirmed
+
+### CDC Tooling Selection
+
+| Criterion | AWS DMS | Azure Database Migration Service | Google Datastream | Debezium |
+|-----------|---------|----------------------------------|-------------------|----------|
+| Platform fit | AWS only | Azure only | GCP only | Any — cloud or on-prem |
+| Setup complexity | Low — GUI-driven | Low — GUI-driven | Low — GUI-driven | High — Kafka + connectors |
+| Time to first event | Hours | Hours | Hours | Days to weeks |
+| Operational overhead | Zero — managed | Zero — managed | Zero — managed | High — self-hosted |
+| Budget fit | Pay per use | Pay per use | Pay per use | Infra + engineering cost |
+| Source RDBMS support | PostgreSQL, MySQL, Oracle, SQL Server | PostgreSQL, MySQL, Oracle, SQL Server | PostgreSQL, MySQL, Oracle | PostgreSQL, MySQL, Oracle, SQL Server |
+| Latency | Seconds | Seconds | Sub-second | Sub-second |
+| On-prem support | No | No | No | Yes — runs anywhere |
+| GDPR data residency | AWS region-bound | Azure region-bound | GCP region-bound | Full control — your VPC |
+| **Verdict** | Recommended on AWS | Recommended on Azure | Recommended on GCP | Recommended on-prem or multi-cloud |
+
+**Recommendation logic by deployment:**
+
+| Infrastructure | Recommended CDC tool | Reason |
+|---------------|---------------------|--------|
+| AWS | AWS DMS | Native, managed, hours to operational |
+| Azure | Azure Database Migration Service | Native, managed, hours to operational |
+| GCP | Google Datastream | Native, managed, sub-second latency |
+| On-premises | Debezium | Only option that runs without cloud dependency |
+| Multi-cloud or hybrid | Debezium | Cloud-agnostic, runs in any VPC or container |
+| Platform TBC | Defer — confirm in Month 1 Discovery | Wrong tool = rework mid-migration |
 
 ### What Changes and Why
 

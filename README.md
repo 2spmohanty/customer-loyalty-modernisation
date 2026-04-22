@@ -15,12 +15,13 @@ the business while we do it.
 
 ## Navigation
 
-| Section | Description | Status                       |
-|---------|-------------|------------------------------|
-| [01 — Scoping & Requirements](01-scoping.md) | Assumptions, open questions, constraints | APPROVED                     |
-| [02 — Architecture](02-architecture.md) | Target state design, technology selection | IN PROGRESS                  |
-| [03 — Delivery Roadmap](03-roadmap.md) | Phased plan, gates, rollback triggers | Draft                        |
-| [04 — Risks & Mitigation](04-risks.md) | Identified risks and management strategy | COMPLETED. AWAITING APPROVAL |
+| Section                                                                          | Description                               | Status                       |
+|----------------------------------------------------------------------------------|-------------------------------------------|------------------------------|
+| [01 — Scoping & Requirements](01-scoping.md)                                     | Assumptions, open questions, constraints  | APPROVED                     |
+| [02 — Architecture](02-architecture.md)                                          | Target state design, technology selection | IN PROGRESS                  |
+| [03 — Delivery Roadmap](03-roadmap.md)                                           | Phased plan, gates, rollback triggers     | Draft                        |
+| [04 — Risks & Mitigation](04-risks.md)                                           | Identified risks and management strategy  | COMPLETED. AWAITING APPROVAL |
+| [05 — Stored Procedures & Triggers Assessment](05-stored-procedures-triggers.md) | Stored Procedure & Triggers Assessment    | BLOCKED                      |
 
 ---
 

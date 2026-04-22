@@ -125,7 +125,31 @@ The proxy layer buys time to do it properly.
 
 ---
 
-### Risk 5 — Team Readiness and Knowledge Transfer
+### Risk 5 — Hidden Stored Procedure and Trigger Complexity
+
+```
+Likelihood:  Medium — common in systems of this age
+Impact:      High — directly affects timeline and budget
+```
+
+**What it is:**
+  Undocumented business logic embedded in the database
+  Not visible in application code or schema diagrams
+  Only discovered during Month 1 data audit
+
+**Mitigation:**
+  Full stored procedure and trigger audit is a mandatory Month 1 deliverable
+  Gate G1 does not pass until audit is complete and all logic is classified and assigned an owner
+
+  Simple logic → Atlas Triggers (low effort)
+  Complex logic → application layer (budget impact)
+  Unknown logic → freeze until understood
+
+**Detail Assessment**  
+    
+  [Stored Procedures & Triggers Assessment](05-stored-procedures-triggers.md)
+
+### Risk 6 — Team Readiness and Knowledge Transfer
 
 ```
 Likelihood:  MEDIUM
