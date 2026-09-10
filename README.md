@@ -3,8 +3,14 @@
 
 >**Client:** Global Retailer  
 **Engagement Type:** Legacy RDBMS → Document Model Migration  
-**Status:** ```IN PROGRESS```  
+**Status:** ```COMPLETE```  
 **Last Updated:** [20 April 2026]
+
+---
+
+# PRESENTATION
+
+![Stratgey](https://2spmohanty.github.io/rdbms-document-migration/)
 
 
 ---
@@ -51,6 +57,9 @@ the business while we do it.
 #### CURRENT STATE
 
 ![Current State](current_state.svg)
+
+---
+
 
 #### TARGET STATE
 
