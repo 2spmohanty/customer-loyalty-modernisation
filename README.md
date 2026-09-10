@@ -14,17 +14,6 @@ the business while we do it.
 
 ---
 
-## Navigation
-
-| Section                                                                          | Description                               | Status                       |
-|----------------------------------------------------------------------------------|-------------------------------------------|------------------------------|
-| [01 — Scoping & Requirements](01-scoping.md)                                     | Assumptions, open questions, constraints  | APPROVED                     |
-| [02 — Architecture](02-architecture.md)                                          | Target state design, technology selection | IN PROGRESS                  |
-| [03 — Requirement, Risks & Mitigation](03-requirements-risks-mitigation.md)      | Identified risks and management strategy  | COMPLETED. AWAITING APPROVAL |
-| [04 — Delivery Roadmap](04-roadmap.md)                                           | Phased plan, gates, rollback triggers     | Draft                        |
-| [05 — Stored Procedures & Triggers Assessment](05-stored-procedures-triggers.md) | Stored Procedure & Triggers Assessment    | BLOCKED                      |
-
----
 
 
 ## Quick Reference — Delivery At a Glance
@@ -58,6 +47,14 @@ the business while we do it.
 ---
 
 ## Architecture Diagram
+
+#### CURRENT STATE
+
+![Current State](current_state.svg)
+
+#### TARGET STATE
+
+![Target State](target_architecture.svg)
 
 
 
