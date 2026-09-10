@@ -10,7 +10,7 @@
 
 # PRESENTATION
 
-![Stratgey](https://2spmohanty.github.io/rdbms-document-migration/)
+[Stratgey](https://2spmohanty.github.io/rdbms-document-migration/)
 
 
 ---
